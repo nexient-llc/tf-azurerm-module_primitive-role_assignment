@@ -128,7 +128,7 @@ When run, `make` will look for a file called `.cafenv` in the repository root. T
 
 | Name | Version |
 |------|---------|
-| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.88.0 |
 
 ## Modules
 
@@ -138,19 +138,20 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [random_string.string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
+| [azurerm_role_assignment.role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_length"></a> [length](#input\_length) | n/a | `number` | `24` | no |
-| <a name="input_number"></a> [number](#input\_number) | n/a | `bool` | `true` | no |
-| <a name="input_special"></a> [special](#input\_special) | n/a | `bool` | `false` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name of the role assignment. Has to be an unique UUID/GUID. If not specified, one will be generated automatically | `string` | `null` | no |
+| <a name="input_scope"></a> [scope](#input\_scope) | The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333,<br>    /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup,<br>    or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM,<br>    or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created. | `string` | n/a | yes |
+| <a name="input_role_definition_id"></a> [role\_definition\_id](#input\_role\_definition\_id) | (Optional) The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. | `string` | `null` | no |
+| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_string"></a> [string](#output\_string) | n/a |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the role definition |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

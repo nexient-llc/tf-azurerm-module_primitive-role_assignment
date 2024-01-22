@@ -10,4 +10,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+variable "name" {
+  description = "Name of the role assignment. Has to be an unique UUID/GUID. If not specified, one will be generated automatically"
+  type        = string
+  default     = null
+}
 
+variable "scope" {
+  description = <<EOT
+    The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333,
+    /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup,
+    or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM,
+    or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
+  EOT
+  type        = string
+}
+
+variable "role_definition_id" {
+  description = "(Optional) The Scoped-ID of the Role Definition. Changing this forces a new resource to be created."
+  type        = string
+  default     = null
+}
+
+variable "principal_id" {
+  description = "The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created."
+  type        = string
+}
