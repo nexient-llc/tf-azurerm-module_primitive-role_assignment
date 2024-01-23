@@ -11,8 +11,8 @@
 // limitations under the License.
 
 resource "azurerm_role_assignment" "role_assignment" {
-  name               = var.name
-  scope              = var.scope
-  role_definition_id = var.role_definition_id
-  principal_id       = var.principal_id
+  name                 = var.name
+  scope                = var.scope
+  role_definition_name = var.role_definition_name
+  principal_id         = var.principal_id
 }

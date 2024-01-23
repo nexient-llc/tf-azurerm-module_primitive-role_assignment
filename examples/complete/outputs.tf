@@ -10,6 +10,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-output "string" {
-  value = format("%s🍰%s", module.cake_prefix.string, module.cake_suffix.string)
+output "role_assignment_id" {
+  value = module.role_assignment.id
 }

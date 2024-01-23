@@ -26,8 +26,8 @@ variable "scope" {
   type        = string
 }
 
-variable "role_definition_id" {
-  description = "(Optional) The Scoped-ID of the Role Definition. Changing this forces a new resource to be created."
+variable "role_definition_name" {
+  description = "(Optional) Name of the Role Definition. Changing this forces a new resource to be created. Example: Reader"
   type        = string
   default     = null
 }

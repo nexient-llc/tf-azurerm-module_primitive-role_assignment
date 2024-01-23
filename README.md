@@ -146,7 +146,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | Name of the role assignment. Has to be an unique UUID/GUID. If not specified, one will be generated automatically | `string` | `null` | no |
 | <a name="input_scope"></a> [scope](#input\_scope) | The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333,<br>    /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup,<br>    or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM,<br>    or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created. | `string` | n/a | yes |
-| <a name="input_role_definition_id"></a> [role\_definition\_id](#input\_role\_definition\_id) | (Optional) The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. | `string` | `null` | no |
+| <a name="input_role_definition_name"></a> [role\_definition\_name](#input\_role\_definition\_name) | (Optional) Name of the Role Definition. Changing this forces a new resource to be created. Example: Reader | `string` | `null` | no |
 | <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created. | `string` | n/a | yes |
 
 ## Outputs
