@@ -10,4 +10,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
+resource "azurerm_role_assignment" "role_assignment" {
+  name                 = var.name
+  scope                = var.scope
+  role_definition_name = var.role_definition_name
+  principal_id         = var.principal_id
+}
